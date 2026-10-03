@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- LEARN: the viewport tag makes the page scale properly on phones -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muscle & Fitness Tirana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/jpeg" href="favicon.jpg">
+<!-- LEARN: this tag loads the separate CSS file. The path is relative, so style.css must sit next to index.html -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LEARN: <header> holds the top of the page: logo + navigation -->
+<header>
+  <nav class="wrap" aria-label="Main">
+    <a class="logo" href="#top">Muscle & Fitness Tirana</a>
+    <ul>
+      <li><a href="#classes">Classes</a></li>
+      <li><a href="#plans">Membership</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a href="#rules">Rules</a></li>
+    </ul>
+  </nav>
+  <div class="wrap hero" id="top">
+    <div class="hero-text">
+      <h1>Muscle <br>& Fitness</h1>
+      <p>Free weights, coached classes and a floor that never feels crowded. Right in the middle of Tirana.</p>
+      <a class="btn" href="#plans">Join the gym</a>
+      <!-- LEARN: a link to #visit scrolls down to the footer, where the full opening hours are -->
+      <a class="hero-meta" href="#visit">Open daily at Rruga Siri Kodra, Tirana. See hours</a>
+    </div>
+    <!-- LEARN: <img> shows a picture. alt text describes it for screen readers and shows if the file is missing -->
+    <img class="badge" src="favicon2.jpg" alt="Muscle & Fitness Tirana logo">
+  </div>
+</header>
+
+<!-- LEARN: <main> is the page's main content; each <section> is one topic -->
+<main>
+  <section id="classes">
+    <div class="wrap">
+      <h2>Weekly classes</h2>
+      <div class="tabs" role="tablist">
+        <button role="tab" aria-selected="true" data-day="mon">Mon</button>
+        <button role="tab" aria-selected="false" data-day="wed">Wed</button>
+        <button role="tab" aria-selected="false" data-day="sat">Sat</button>
+      </div>
+      <div class="day active" id="mon">
+        <div class="slot"><time>07:00</time><b>Strength basics</b><span>60 min</span></div>
+        <div class="slot"><time>18:00</time><b>Conditioning circuit</b><span>45 min</span></div>
+        <div class="slot"><time>19:30</time><b>Mobility and stretch</b><span>30 min</span></div>
+      </div>
+      <div class="day" id="wed">
+        <div class="slot"><time>07:00</time><b>Olympic lifting</b><span>60 min</span></div>
+        <div class="slot"><time>18:30</time><b>Boxing fitness</b><span>60 min</span></div>
+      </div>
+      <div class="day" id="sat">
+        <div class="slot"><time>10:00</time><b>Full body</b><span>60 min</span></div>
+        <div class="slot"><time>11:30</time><b>Open floor with a coach</b><span>90 min</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="plans">
+    <div class="wrap">
+      <h2>Membership</h2>
+      <div class="plans">
+        <article class="plan">
+          <h3>Day pass</h3>
+          <div class="price">500 L</div>
+          <ul><li>Full gym floor</li><li>Lockers and showers</li></ul>
+        </article>
+        <article class="plan best">
+          <h3>Monthly</h3>
+          <div class="price">4,500 L</div>
+          <ul><li>Unlimited gym access</li><li>All classes included</li><li>Free fitness check-in</li></ul>
+        </article>
+        <article class="plan">
+          <h3>Student</h3>
+          <div class="price">3,500 L</div>
+          <ul><li>Monthly access</li><li>Bring a valid student ID</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEARN: <ol> is an ordered (numbered) list. lang="sq" tells browsers this text is Albanian -->
+  <section id="rules">
+    <div class="wrap">
+      <h2>Gym rules</h2>
+      <p class="rules-intro" lang="sq">Gjitheashtu duam te ritheksojme rregulloren e palestres!</p>
+      <ol class="rules" lang="sq">
+        <li>Peshat duhet te vendosen ne vendet perkatese pas perdorimit te tyre!</li>
+        <li>Perdorimi i peshqirit gjate ushtrimeve eshte i detyrueshem!</li>
+        <li>Atlete te pastra duhet te perdoren gjate seances stervitore!</li>
+        <li>Lenia e rrobave, peshqirit dhe atleteve ne ambjentet e palestres eshte e ndaluar!</li>
+        <li>Bllokimi i dollapeve dhe marrja me vete e celsave te tyre pas perfundimit te seances stervitore eshte e ndaluar!</li>
+        <li>Demtimi me dashje ose pa dashje i ambjenteve te palestres duhet te raportohet tek stafi dhe duhet te paguhet!</li>
+        <li>Pagesa e abonimeve nuk kthehet!</li>
+        <li>Karta e klientit eshte personale dhe ndalohet dhenia e kartes dikujt tjeter!</li>
+        <li>Abonimi nuk mund ti kaloje nje personi tjeter!</li>
+        <li>Data e abonimit nuk shtyhet ne rast mosfrekuentimi! Seancat duhet te kryhen brenda dates se abonimit!</li>
+      </ol>
+      <p class="warning" lang="sq">&#9888;&#65039; Stafi ka te drejte tju refuzoje hyrjen ne ambjent ne rast se nuk zbatohet rregullorja dhe ne raste ekstreme mund te perjashtoheni nga palestra</p>
+      <p class="closing" lang="sq">Rregullat jane qe te kemi nje ambjent sa me te paster dhe higjenik, ju lutem ti zbatoni!</p>
+    </div>
+  </section>
+</main>
+
+<!-- LEARN: the footer now holds the visit info. id="visit" keeps the "Visit" nav link working: it scrolls down to here -->
+<footer id="visit">
+  <div class="wrap visit">
+    <div>
+      <h3>Find us</h3>
+      <p>Rruga Siri Kodra 200 metra nga Selvia,<br>prane ish punishtes pastave!<br>Tirana, Albania</p>
+    </div>
+    <div>
+      <h3>Opening hours</h3>
+      <p>Mon to Fri: 06:00 to 22:00<br>Sat and Sun: 08:00 to 20:00</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p><a href="https://www.instagram.com/muscle.fitness.tirana?stkn=MXcyYXFtc3VxcDdkcw==" target="_blank">Instagram Page (click me)</a><br>Phone: +355 00 000 0000</p>
+    </div>
+  </div>
+    <div class="wrap">
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d261.5930951370923!2d19.8210823!3d41.335721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350310bb7396c69%3A0xc7fee7b16294a06!2sMuscle%20%26%20Fitness!5e1!3m2!1sen!2s!4v1791065243430!5m2!1sen!2s" title="Map to Muscle & Fitness Tirana" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  
+  <div class="wrap footer-bottom"><span>muscle.fitness.tirana</span><span>Open daily</span></div>
+</footer>
+
+<script>
+/* LEARN: JavaScript reacts to clicks. Here we show the clicked day and hide the others. */
+const dayTabs = document.querySelectorAll('.tabs button');
+dayTabs.forEach(function(tab){
+  tab.addEventListener('click', function(){
+    dayTabs.forEach(function(t){ t.setAttribute('aria-selected', t === tab ? 'true' : 'false'); });
+    document.querySelectorAll('.day').forEach(function(d){
+      d.classList.toggle('active', d.id === tab.dataset.day);
+    });
+  });
+});
+</script>
+</body>
+</html>
